@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneShop - 2025 Նոր Հեռախոսներ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-mobile-alt"></i> PhoneShop 2025</h1>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#home">Գլխավոր</a></li>
+                        <li><a href="#products">2025 Մոդելներ</a></li>
+                        <li><a href="#preorder">Նախապատվեր</a></li>
+                        <li><a href="#contact">Կապ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="cart-btn" id="cartButton">
+                        <i class="fas fa-shopping-cart"></i> Զամբյուղ (<span id="cartCount">0</span>)
+                    </button>
+                    <button class="login-btn"><i class="fas fa-user"></i> Մուտք</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3><i class="fas fa-shopping-cart"></i> Ձեր Զամբյուղը</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will appear here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-basket"></i>
+                    <p>Զամբյուղը դատարկ է</p>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Ընդհանուր:</span>
+                    <span id="cartTotal">$0</span>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn-checkout">Առաքման Ձևակերպում</button>
+                    <button class="btn-clear-cart">Դատարկել Զամբյուղը</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2>2025 - Հեռախոսների Նոր Էրա</h2>
+                <p>AI, Ծալվող Էկրաններ, Կենսաչափական Առաջադեմ Տեխնոլոգիաներ</p>
+                <a href="#products" class="btn-primary">Դիտել 2025 Մոդելները</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="2025 հեռախոսներ">
+                <div class="hero-badge">2025</div>
+            </div>
+        </section>
+
+        <!-- Products Section - 2025 MODELS -->
+        <section class="products-section" id="products">
+            <h2 class="section-title">2025 ՏԱՐՎԱ ԱՄԵՆԱՆՈՐ ՀԵՌԱԽՈՍՆԵՐ</h2>
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="all">Բոլորը</button>
+                <button class="filter-btn" data-filter="foldable">Ծալվող</button>
+                <button class="filter-btn" data-filter="ai">AI Հեռախոսներ</button>
+                <button class="filter-btn" data-filter="gaming">Գեյմինգ</button>
+                <button class="filter-btn" data-filter="flagship">Ֆլագշիպ</button>
+            </div>
+            <div class="products-grid">
+                
+                <!-- iPhone 16 Pro Max -->
+                <article class="product-card" data-id="1" data-category="flagship" data-name="iPhone 16 Pro Max" data-price="1299" data-image="https://images.unsplash.com/photo-1695048133142-1a20484d2569?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="product-badge">ՆՈՐ</div>
+                    <div class="product-badge hot">TOP</div>
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQInzI69QTfhKGZZJSTKjbTAdI4ZeJ5fhSBBw&s" alt="iPhone 16 Pro Max">
+                    </div>
+                    <div class="product-info">
+                        <h3>iPhone 16 Pro Max</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-microchip"></i> A18 Pro</span>
+                            <span><i class="fas fa-camera"></i> 64MP</span>
+                            <span><i class="fas fa-battery-full"></i> 5000mAh</span>
+                        </div>
+                        <p class="product-description">Տիանումային դիզայն, 6.9" ProMotion, Apple Intelligence AI</p>
+                        <div class="product-price">$1,299</div>
+                        <div class="product-stock">Մնացել է: <span class="stock-count">12</span></div>
+                        <button class="btn-add-to-cart">Ավելացնել Զամբյուղում</button>
+                        <button class="btn-quick-view">Արագ Դիտում</button>
+                    </div>
+                </article>
+
+                <!-- Samsung Galaxy Z Fold 7 -->
+                <article class="product-card" data-id="2" data-category="foldable" data-name="Samsung Galaxy Z Fold 7" data-price="1899" data-image="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="product-badge">ԾԱԼՎՈՂ</div>
+                    <div class="product-badge new">2025</div>
+                    <div class="product-image">
+                        <img src="https://notebookcentre.am/wa-data/public/shop/products/99/01/10199/images/21855/21855.970.jpg" alt="Samsung Galaxy Z Fold 7">
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung Galaxy Z Fold 7</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-expand-alt"></i> 7.6"</span>
+                            <span><i class="fas fa-camera"></i> 200MP</span>
+                            <span><i class="fas fa-sync"></i> 360°</span>
+                        </div>
+                        <p class="product-description">Լրիվ ծալվող, S-Pen աջակցություն, Under Display Camera</p>
+                        <div class="product-price">$1,899</div>
+                        <div class="product-stock">Մնացել է: <span class="stock-count">8</span></div>
+                        <button class="btn-add-to-cart">Ավելացնել Զամբյուղում</button>
+                        <button class="btn-quick-view">Արագ Դիտում</button>
+                    </div>
+                </article>
+
+                <!-- Google Pixel 10 Pro -->
+                <article class="product-card" data-id="3" data-category="ai" data-name="Google Pixel 10 Pro" data-price="1099" data-image="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="product-badge">AI</div>
+                    <div class="product-badge exclusive">EXCLUSIVE</div>
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8l4n94BKWtdXD4nBQs-z_SwD-hGfowMp5iA&s" alt="Google Pixel 10 Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3>Google Pixel 10 Pro</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-robot"></i> Tensor G5</span>
+                            <span><i class="fas fa-eye"></i> Gemini AI</span>
+                            <span><i class="fas fa-sun"></i> Solar Charge</span>
+                        </div>
+                        <p class="product-description">Լրիվ AI հեռախոս, ինքնավար ֆոտո, 48-ժամյա մարտկոց</p>
+                        <div class="product-price">$1,099</div>
+                        <div class="product-stock">Մնացել է: <span class="stock-count">15</span></div>
+                        <button class="btn-add-to-cart">Ավելացնել Զամբյուղում</button>
+                        <button class="btn-quick-view">Արագ Դիտում</button>
+                    </div>
+                </article>
+
+                <!-- Xiaomi 15 Ultra -->
+                <article class="product-card" data-id="4" data-category="flagship" data-name="Xiaomi 15 Ultra" data-price="999" data-image="https://images.unsplash.com/photo-1546054451-aa224c6e5e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="product-badge">FLAGSHIP</div>
+                    <div class="product-image">
+                        <img src="https://www.yerevanmobile.am/media/catalog/product/cache/07720dad39bc68bc6b838050c0f2e34d/2/-/2-1.jpg" alt="Xiaomi 15 Ultra">
+                    </div>
+                    <div class="product-info">
+                        <h3>Xiaomi 15 Ultra</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-bolt"></i> Snapdragon 8 Gen 4</span>
+                            <span><i class="fas fa-camera"></i> 50MP</span>
+                            <span><i class="fas fa-charging-station"></i> 240W</span>
+                        </div>
+                        <p class="product-description">Leica տեսախցիկներ, 2K էկրան, 240W արագ լիցքավորում</p>
+                        <div class="product-price">$999</div>
+                        <div class="product-stock">Մնացել է: <span class="stock-count">20</span></div>
+                        <button class="btn-add-to-cart">Ավելացնել Զամբյուղում</button>
+                        <button class="btn-quick-view">Արագ Դիտում</button>
+                    </div>
+                </article>
+
+                <!-- ASUS ROG Phone 8 -->
+                <article class="product-card" data-id="5" data-category="gaming" data-name="ASUS ROG Phone 8" data-price="1199" data-image="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="product-badge">ԳԵՅՄԻՆԳ</div>
+                    <div class="product-badge gaming">GAMER</div>
+                    <div class="product-image">
+                        <img src="data:image/jpeg;base64,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" alt="ASUS ROG Phone 8">
+                    </div>
+                    <div class="product-info">
+                        <h3>ASUS ROG Phone 8</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-gamepad"></i> 165Hz</span>
+                            <span><i class="fas fa-wind"></i> Cooler</span>
+                            <span><i class="fas fa-bolt"></i> 6000mAh</span>
+                        </div>
+                        <p class="product-description">Գեյմինգ հեռախոս, 165Hz AMOLED, խաղային աքսեսուարներ</p>
+                        <div class="product-price">$1,199</div>
+                        <div class="product-stock">Մնացել է: <span class="stock-count">10</span></div>
+                        <button class="btn-add-to-cart">Ավելացնել Զամբյուղում</button>
+                        <button class="btn-quick-view">Արագ Դիտում</button>
+                    </div>
+                </article>
+
+                <!-- OnePlus 13 Pro -->
+                <article class="product-card" data-id="6" data-category="flagship" data-name="OnePlus 13 Pro" data-price="899" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="product-badge">OXYGEN OS</div>
+                    <div class="product-image">
+                        <img src="data:image/jpeg;base64,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" alt="OnePlus 13 Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3>OnePlus 13 Pro</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-bolt"></i> 150W</span>
+                            <span><i class="fas fa-droplet"></i> IP69</span>
+                            <span><i class="fas fa-volume-up"></i> Dolby</span>
+                        </div>
+                        <p class="product-description">150W լիցքավորում, Hasselblad տեսախցիկ, OxygenOS 15</p>
+                        <div class="product-price">$899</div>
+                        <div class="product-stock">Մնացել է: <span class="stock-count">18</span></div>
+                        <button class="btn-add-to-cart">Ավելացնել Զամբյուղում</button>
+                        <button class="btn-quick-view">Արագ Դիտում</button>
+                    </div>
+                </article>
+
+                <!-- Huawei Mate 70 Pro -->
+                <article class="product-card" data-id="7" data-category="foldable" data-name="Huawei Mate 70 Pro" data-price="1399" data-image="https://images.unsplash.com/photo-1546054451-aa224c6e5e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="product-badge">ՀԱՄԲԱՐՁ</div>
+                    <div class="product-badge foldable">ԾԱԼՎՈՂ</div>
+                    <div class="product-image">
+                        <img src="data:image/jpeg;base64,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" alt="Huawei Mate 70 Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3>Huawei Mate 70 Pro</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-satellite"></i> Satellite</span>
+                            <span><i class="fas fa-camera"></i> XMAGE</span>
+                            <span><i class="fas fa-battery-full"></i> 2 օր</span>
+                        </div>
+                        <p class="product-description">Համբարձված կապ, ծալվող էկրան, HarmonyOS Next</p>
+                        <div class="product-price">$1,399</div>
+                        <div class="product-stock">Մնացել է: <span class="stock-count">7</span></div>
+                        <button class="btn-add-to-cart">Ավելացնել Զամբյուղում</button>
+                        <button class="btn-quick-view">Արագ Դիտում</button>
+                    </div>
+                </article>
+
+                <!-- Sony Xperia 1 VI -->
+                <article class="product-card" data-id="8" data-category="flagship" data-name="Sony Xperia 1 VI" data-price="1499" data-image="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="product-badge">PRO VIDEO</div>
+                    <div class="product-badge sony">SONY</div>
+                    <div class="product-image">
+                        <img src="data:image/jpeg;base64,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" alt="Sony Xperia 1 VI">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sony Xperia 1 VI</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-film"></i> 4K 120fps</span>
+                            <span><i class="fas fa-headphones"></i> 3.5mm</span>
+                            <span><i class="fas fa-palette"></i> Creator</span>
+                        </div>
+                        <p class="product-description">Պրոֆեսիոնալ տեսագրություն, 4K OLED, 3.5mm ականջակալ</p>
+                        <div class="product-price">$1,499</div>
+                        <div class="product-stock">Մնացել է: <span class="stock-count">5</span></div>
+                        <button class="btn-add-to-cart">Ավելացնել Զամբյուղում</button>
+                        <button class="btn-quick-view">Արագ Դիտում</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Pre-order Section -->
+        <section class="preorder-section" id="preorder">
+            <h2 class="section-title">ՆԱԽԱՊԱՏՎԵՐ 2025</h2>
+            <div class="preorder-banner">
+                <div class="preorder-content">
+                    <h3>Samsung Galaxy S25 Ultra</h3>
+                    <p>Նախապատվերի հնարավորություն՝ մինչև պաշտոնական թողարկումը</p>
+                    <div class="preorder-price">
+                        <span class="old-price">$1,599</span>
+                        <span class="new-price">$1,399</span>
+                    </div>
+                    <button class="btn-preorder">ՆԱԽԱՊԱՏՎԵՐ</button>
+                </div>
+                <div class="preorder-image">
+                    <img src="data:image/jpeg;base64,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" alt="Galaxy S25 Ultra">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar/Aside -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3><i class="fas fa-fire"></i> 2025 ԹՈՊ ՎԱՃԱՌՔ</h3>
+                <ul class="top-products">
+                    <li>iPhone 16 Pro Max - 320 վաճառք</li>
+                    <li>Samsung Z Fold 7 - 285 վաճառք</li>
+                    <li>Google Pixel 10 - 210 վաճառք</li>
+                    <li>Xiaomi 15 Ultra - 180 վաճառք</li>
+                </ul>
+            </div>
+            <div class="sidebar-widget">
+                <h3><i class="fas fa-tags"></i> 2025 ԶԵՂՉԵՐ</h3>
+                <div class="discount-item">
+                    <p>Բոլոր ծալվող հեռախոսների վրա 15% զեղչ</p>
+                    <small>Մինչև 31.12.2025</small>
+                </div>
+                <div class="discount-item">
+                    <p>AI հեռախոսներ + անվճար ականջակալներ</p>
+                    <small>Սահմանափակ առաջարկ</small>
+                </div>
+            </div>
+            <div class="sidebar-widget">
+                <h3><i class="fas fa-video"></i> 2025 ՆՈՐՈՒԹՅՈՒՆՆԵՐ</h3>
+                <video controls width="100%">
+                    <source src="https://r1---sn-hun5ghxop5-x8os.googlevideo.com/videoplayback?expire=1766756582&ei=hjxOadLZDYvJi9oP5JesyQE&ip=80.187.123.27&id=o-AC-A2V89DXXPIAWd-5_HiUHqp6JtgqrOqM4CLGkZLj7n&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&rms=au%2Cau&bui=AYUSA3Az6eih7CjdjqBKK5yjZ0NPWRkf7rF3YSSO8WoNpjWfYdob6Tl2WCBfp3UT74C2-zyygJ3xtC7x&spc=wH4Qq-MQHhCeCrk7vJY8&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=6395642&ratebypass=yes&dur=288.624&lmt=1764770306297717&fexp=51552689%2C51565115%2C51565681%2C51580968&c=ANDROID&txp=6209224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgBwAhzqH5UGXr8Ee69kS6iEATWrKR-5Ee8d14qw28DaECIDztC-dhWqvt578XJ5pzj6YWPkKo3zNcrcd85uE4Y6OC&title=_iPhone%202026%20vs%20Samsung%20Galaxy%202025.mp4&cms_redirect=yes&cps=100&met=1766735005,&mh=IH&mip=217.76.15.162&mm=31&mn=sn-hun5ghxop5-x8os&ms=au&mt=1766734619&mv=m&mvi=1&pl=21&lsparams=cps,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAJ9jCOjeYnSoWU9hUP0Hu52ROnpTrqblmAe13S260oPFAiEA_pmD-P6hD-6sPNzIYzaazrWDrQEO2KGk7bjMfXLgq5s%3D" type="video/mp4">
+                    Ձեր բրաուզերը չի աջակցում վիդեո տեգը։
+                </video>
+            </div>
+            <div class="sidebar-widget">
+                <h3><i class="fas fa-music"></i> 2025 ՆԵՐԿԱՅԱՑՈՒՄ</h3>
+                <audio controls>
+                    <source src="https://delta.123tokyo.xyz/get.php/c/f9/I3OJUwILelU.mp3?n=Relaxing%20music%20Relieves%20stress%2C%20Anxiety%20and%20Depression%20%F0%9F%8C%BF%20Heals%20the%20Mind%2C%20body%20and%20Soul%20-%20Deep%20Sleep&h=MHAWTfNhsUFRETjCRUbhqg&s=1766742452&cid2=MjE3Ljc2LjE1LjE2MnxBTXxSSTFB&uT=G" type="audio/mpeg">
+                    Ձեր բրաուզերը չի աջակցում աուդիո տեգը։
+                </audio>
+                <p class="audio-desc">Լսեք 2025 տեխնոլոգիաների մասին</p>
+            </div>
+        </aside>
+
+        <!-- Contact Form -->
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">ԿԱՊ 2025 ՄՈԴԵԼՆԵՐԻ ՀԱՄԱՐ</h2>
+            <form class="contact-form" id="contactForm2025">
+                <div class="form-group">
+                    <label for="name">Անուն Ազգանուն</label>
+                    <input type="text" id="name" name="name" placeholder="Մուտքագրեք ձեր անունը" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Էլ․ փոստ</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Հեռախոսահամար</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+374 00 000000" required>
+                </div>
+                <div class="form-group">
+                    <label for="product2025">Ընտրեք 2025 մոդելը</label>
+                    <select id="product2025" name="product2025" required>
+                        <option value="">Ընտրեք ապրանքը</option>
+                        <option value="iphone16">iPhone 16 Pro Max</option>
+                        <option value="fold7">Samsung Galaxy Z Fold 7</option>
+                        <option value="pixel10">Google Pixel 10 Pro</option>
+                        <option value="xiaomi15">Xiaomi 15 Ultra</option>
+                        <option value="rog8">ASUS ROG Phone 8</option>
+                        <option value="oneplus13">OnePlus 13 Pro</option>
+                        <option value="mate70">Huawei Mate 70 Pro</option>
+                        <option value="xperia1vi">Sony Xperia 1 VI</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Հաղորդագրություն կամ հարց</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Ինչպիսի՞ հարցեր ունեք 2025 մոդելների մասին..." required></textarea>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" checked> Կցանկանայի ստանալ 2025 նորություններ
+                    </label>
+                    <label>
+                        <input type="checkbox" name="preorder_info"> Տեղեկացնել նախապատվերի մասին
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit">ՈՒՂԱՐԿԵԼ ՀԱՐՑ 2025</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PhoneShop 2025</h4>
+                    <p>Առաջինը Հայաստանում 2025 մոդելներով</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Երևան, Նոր Էրայի փ. 2025</p>
+                    <p><i class="fas fa-phone"></i> +374 10 202525</p>
+                    <p><i class="fas fa-envelope"></i> info2025@phoneshop.am</p>
+                </div>
+                <div class="footer-section">
+                    <h4>2025 Մոդելներ</h4>
+                    <ul>
+                        <li><a href="#products">Ծալվող Հեռախոսներ</a></li>
+                        <li><a href="#products">AI Հեռախոսներ</a></li>
+                        <li><a href="#products">Գեյմինգ</a></li>
+                        <li><a href="#products">Ֆլագշիպներ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Սպասարկում</h4>
+                    <ul>
+                        <li><a href="#">Պահեստամասեր 2025</a></li>
+                        <li><a href="#">Կրթաթոշակ 2025</a></li>
+                        <li><a href="#">Ծրագրային ապահովում</a></li>
+                        <li><a href="#">Վերանորոգում</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Հետևեք 2025-ին</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Էլ․ փոստ 2025 նորությունների համար">
+                        <button class="btn-newsletter">Բաժանորդագրվել</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PhoneShop. Բոլոր 2025 մոդելները պաշտոնապես պատվիրված են։</p>
+                <p class="footer-year">2025 - Տեխնոլոգիաների Նոր Էրա</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
